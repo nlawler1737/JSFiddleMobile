@@ -1,7 +1,8 @@
 let path = document.location.pathname.split('/')
+let host = document.location.host
 let name
 try {name = document.querySelector('.profileDetails a').innerText.trim()}catch(e){}
-if (path[1] == name || path[1] == '') {editor()}
+if (host == 'jsfiddle.net' && (path[1] == name || path[1] == '')) {editor()}
 function editor() {
 let style = document.createElement('style')
 style.innerHTML = `
