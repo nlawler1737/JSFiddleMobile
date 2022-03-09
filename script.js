@@ -1,3 +1,8 @@
+let path = document.location.pathname.split('/')
+let name
+try {name = document.querySelector('.profileDetails a').innerText.trim()}catch(e){}
+if (path[1] == name || path[1] == '') {editor()}
+function editor() {
 let style = document.createElement('style')
 style.innerHTML = `
 html {
@@ -46,3 +51,4 @@ const showSidebar = ()=>{
 }
 removeText()
 layout()
+}
