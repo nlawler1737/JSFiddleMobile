@@ -1,7 +1,18 @@
 let style = document.createElement('style')
 style.innerHTML = `
 html {
-    overflow: hidden
+    overflow: hidden;
+    -webkit-overflow: hidden;
+}
+#actions > div > div {
+    width: 80vw;
+}
+#actions > div {
+    left: auto !important;
+    right: 10px !important;
+}
+#layout, .fieldsCont, .selectPairs {
+    text-align: left;
 }
 .hideGrid {
     grid-area: auto !important;
